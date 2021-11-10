@@ -1,3 +1,7 @@
+# About this Project
+Hello Its an Open git-hub repo of React-Curd which helps you to understand the whole curd flow and functionalities. 
+You guys can also contribute in this project if you want to
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
