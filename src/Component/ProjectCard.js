@@ -4,15 +4,15 @@ import { useEffect,useState } from 'react'
 const ProjectCard=()=>{
   const[data,setData]=useState()
   
- useEffect(()=>{
-   (
-     async()=>{
-      const response =await fetch('http://localhost:3001/')
-      setData(await response.json())
-     }
-   )()
-  
- })
+  useEffect(()=>{
+    (
+      async()=>{
+       const response =await fetch('http://localhost:3001/')
+       setData(await response.json())
+      }
+    )()
+   
+  })
  
     return(
       <Row>
