@@ -1,11 +1,22 @@
 import{Row,Card,Button} from 'react-bootstrap'
-
 import ProjectData from '../Data/ProjectData'
+import { useEffect,useState } from 'react'
 const ProjectCard=()=>{
-  {console.log(ProjectData)}
+  const[data,setData]=useState()
+  
+  useEffect(()=>{
+    (
+      async()=>{
+       const response =await fetch('http://localhost:3001/')
+       setData(await response.json())
+      }
+    )()
+   
+  })
+ 
     return(
       <Row>
-       {ProjectData.map((item)=>{
+       {data?.map((item)=>{
            return(
         
                <Card style={{ width: '18rem',marginLeft:'10%'}}>
@@ -13,7 +24,7 @@ const ProjectCard=()=>{
              <Card.Body>
               <Card.Title>{item.title}</Card.Title>
              <Card.Text>
-             {item.Description}
+             {item.description}
              </Card.Text>
              <Button variant="primary" style={{ margin:'10px'}}>Edit</Button>
              <Button variant="danger">Delete</Button>
