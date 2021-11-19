@@ -1,0 +1,10 @@
+.cardImage{
+    width:100px;
+    height:200px;
+}
+.cardImage:hover{
+ 
+  box-shadow: rgba(10, 10, 10, 0.637) 0px 1px 10px;
+ 
+  transition: transform .4s; 
+}
